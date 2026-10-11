@@ -1,0 +1,30 @@
+{
+  "manifest_version": "0.2",
+  "name": "issue-tracker-mcp",
+  "display_name": "Issue Tracker",
+  "version": "1.0.0",
+  "description": "Manage issues through MCP",
+  "author": {
+    "name": "Shriyam"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "dist/mcp-server.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/mcp-server.js"],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "list_issues",
+      "description": "List issues, optionally filtered by status."
+    },
+    {
+      "name": "create_issue",
+      "description": "Create a new issue with a title and priority."
+    }
+  ],
+  "license": "ISC"
+}
