@@ -4,7 +4,7 @@ import { toNodeHandler } from "@modelcontextprotocol/node";
 import { createMcpServer } from "./mcp/create-mcp-server.js";
 
 const app = createMcpExpressApp({
-  host: "127.0.0.1",
+  host: "0.0.0.0",
 });
 
 const authToken = process.env.MCP_AUTH_TOKEN;
